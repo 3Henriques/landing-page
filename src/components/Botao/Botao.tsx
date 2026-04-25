@@ -3,13 +3,17 @@ import { styles } from './BotaoStyle';
 import { useNavigation } from '@react-navigation/native';
 import { HomeNavigation } from '../../navigation/AppNavigator';
 
-export function Botao(){
+type BotaoProps = {
+    idDesenvolvedor: number;
+}
+
+export function Botao({idDesenvolvedor}: BotaoProps){
     const navigation = useNavigation<HomeNavigation>();
 
     return(
         <View>
             <Pressable
-                onPress={() => navigation.navigate('About')}
+                onPress={() => navigation.navigate('SobreMim', { idDesenvolvedor })}
                 style={({ pressed }) => [styles.primaryBtn, pressed && styles.pressed]}
             >
             <Text style={styles.primaryLabel}>Sobre mim</Text>
