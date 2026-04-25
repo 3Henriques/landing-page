@@ -12,3 +12,5 @@ function Titulo({ texto }: TituloProps) {
         </View>
     )
 }
+
+export default Titulo;
