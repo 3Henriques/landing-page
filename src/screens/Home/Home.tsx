@@ -1,4 +1,4 @@
-import { Linking, ScrollView, View } from "react-native";
+import { Linking, ScrollView, View, Text } from "react-native";
 import { styles } from './HomeStyles';
 import { MaterialCommunityIcons } from '@expo/vector-icons';   
 import Rodape from "../../components/Rodape/Rodape";
