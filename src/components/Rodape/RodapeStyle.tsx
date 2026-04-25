@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     backgroundColor: tema.accent,
     paddingVertical: 12,
     paddingHorizontal: 16,
-    marginTop: 8,
+    marginHorizontal:-16,
   },
   text: {
     color: tema.textOnAccent,

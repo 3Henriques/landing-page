@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 import { tema } from '../../Tema';
@@ -21,6 +21,7 @@ export function ComboDevs({ idDesenvolvedor, onChangeIdDesenvolvedor }: Props) {
           onValueChange={(itemValue) => onChangeIdDesenvolvedor(itemValue)}
           style={styles.picker}
           dropdownIconColor={tema.accent}
+          mode={Platform.OS === 'android' ? 'dropdown' : 'dialog'}
         >
           <Picker.Item
             label="Selecione um desenvolvedor"
@@ -33,7 +34,7 @@ export function ComboDevs({ idDesenvolvedor, onChangeIdDesenvolvedor }: Props) {
               key={developer.id}
               label={developer.nome}
               value={developer.id}
-              color={tema.text}
+              color="#000"
             />
           ))}
         </Picker>
