@@ -19,4 +19,11 @@ export const styles = StyleSheet.create({
         paddingHorizontal: tema.paddingHorizontal,
         paddingBottom: 32,
     },
+
+    socialRow: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        marginTop: 8,
+    }
 })

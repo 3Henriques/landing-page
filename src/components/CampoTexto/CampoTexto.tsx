@@ -5,12 +5,10 @@ type CampoTextoProps = {
     texto: string;
 }
 
-function CampoTexto({ texto }: CampoTextoProps) {
+export default function CampoTexto({ texto }: CampoTextoProps) {
     return(
         <View>
             <Text style={styles.text}>{texto}</Text>
         </View>
     )
 }
-
-export default CampoTexto;

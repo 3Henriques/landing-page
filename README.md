@@ -59,6 +59,10 @@ Plaintext
 3. **Inicie o Expo Go**
     
     `npx expo start`
+
+4. **Execute as seguintes dependências**
+    npm install @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context
+    npx expo install @expo/vector-icons
     
 
 ---
