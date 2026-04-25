@@ -3,6 +3,10 @@ import { desenvolvedores } from "../../data/desenvolvedores";
 import type { SobreMimScreenProps } from "../../navigation/AppNavigator";
 import { styles } from "./SobreMimStyle";
 import { FotoPerfil } from "../../components/FotoPerfil/FotoPerfil";
+import Titulo from "../../components/Titulo/Titulo";
+import CampoTexto from "../../components/CampoTexto/CampoTexto";
+import Rodape from "../../components/Rodape/Rodape";
+
 
 export function SobreMim({ route }: SobreMimScreenProps){
     const { idDesenvolvedor } = route.params;
@@ -12,11 +16,12 @@ export function SobreMim({ route }: SobreMimScreenProps){
         throw new Error("Desenvolvedor não localizado");
     }
 
-
     return(
         <View style={[styles.container, styles.root]}>
             <FotoPerfil idDesenvolvedor={idDesenvolvedor} />
-            <Text style={styles.texto}>Nome do desenvolvedor: {desenvolvedor.nome}</Text>
+            <Titulo texto="Sobre mim"/>
+            <CampoTexto texto={desenvolvedor.descricao}/>
+            <Rodape/>
         </View>
     )
 }
