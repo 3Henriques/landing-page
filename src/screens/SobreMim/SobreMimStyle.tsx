@@ -14,6 +14,10 @@ export const styles = StyleSheet.create({
     },
     texto: {
         backgroundColor: '#fff'
-    }
+    },
+    back: {
+        alignSelf: 'flex-start',
+        marginBottom: 8,
+    },
 
 })
