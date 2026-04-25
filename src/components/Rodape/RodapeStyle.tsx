@@ -13,5 +13,6 @@ export const styles = StyleSheet.create({
     fontSize: 11,
     textAlign: 'center',
     lineHeight: 16,
+    fontWeight: 'bold',
   },
 });
