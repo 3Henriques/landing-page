@@ -9,6 +9,7 @@ import Titulo from "../../components/Titulo/Titulo";
 import CampoTexto from "../../components/CampoTexto/CampoTexto";
 import { BotaoRedesSociais } from "../../components/BotaoRedesSociais/BotaoRedesSociais";
 import { tema } from "../../Tema";
+import { ComboDevs } from "../../components/ComboDevs/ComboDevs";
 
 
 export function Home(){
