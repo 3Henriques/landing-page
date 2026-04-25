@@ -1,5 +1,4 @@
 import { View, Text, Pressable } from "react-native";
-import { desenvolvedores } from "../../data/desenvolvedores";
 import type { HomeNavigation, SobreMimScreenProps } from "../../navigation/AppNavigator";
 import { styles } from "./SobreMimStyle";
 import { FotoPerfil } from "../../components/FotoPerfil/FotoPerfil";
@@ -16,6 +15,7 @@ export function SobreMim({ route }: SobreMimScreenProps){
     const { idDesenvolvedor } = route.params;
     const navigation = useNavigation<HomeNavigation>();
     const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
+    const accentAtual = desenvolvedor.cor || tema.accent;
 
 
     return(
@@ -29,8 +29,8 @@ export function SobreMim({ route }: SobreMimScreenProps){
             </Pressable>
             <FotoPerfil idDesenvolvedor={idDesenvolvedor} />
             <Titulo texto="Sobre mim"/>
-            <CampoTexto texto={desenvolvedor?.descricao}/>
-            <Rodape/>
+            <CampoTexto texto={desenvolvedor.descricao}/>
+            <Rodape accentColor={accentAtual} />
         </View>
     )
 }

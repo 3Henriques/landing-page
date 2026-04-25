@@ -6,13 +6,18 @@ type Props = {
   label: string;
   onPress: () => void;
   icon: ReactNode;
+  accentColor?: string;
 };
 
-export function BotaoRedesSociais({ label, onPress, icon }: Props) {
+export function BotaoRedesSociais({ label, onPress, icon, accentColor }: Props) {
   return (
     <Pressable
       onPress={onPress}
-      style={({ pressed }) => [styles.btn, pressed && { opacity: 0.8 }]}
+      style={({ pressed }) => [
+        styles.btn,
+        accentColor ? { borderColor: accentColor } : null,
+        pressed && { opacity: 0.8 },
+      ]}
     >
       <View style={styles.content}>
         {icon}

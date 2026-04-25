@@ -32,7 +32,7 @@ export const desenvolvedores: Desenvolvedor[] = [
             LinkedIn: "",
             Instagram: ""
         },
-        cor: "#F34"
+        cor: "rgb(195, 179, 7)"
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ export const desenvolvedores: Desenvolvedor[] = [
             LinkedIn: "",
             Instagram: ""
         },
-        cor: "#F34"
+        cor: "rgb(51, 255, 51)"
     }
 
 ]
