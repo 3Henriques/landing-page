@@ -9,16 +9,14 @@ import Rodape from "../../components/Rodape/Rodape";
 import { Ionicons } from "@expo/vector-icons";
 import { tema } from "../../Tema";
 import { useNavigation } from "@react-navigation/native";
+import { useDesenvolvedor } from "../../hooks/useDesenvolvedor";
 
 
 export function SobreMim({ route }: SobreMimScreenProps){
     const { idDesenvolvedor } = route.params;
     const navigation = useNavigation<HomeNavigation>();
-    const desenvolvedor = desenvolvedores.find((dev) => dev.id === idDesenvolvedor);
+    const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
 
-    if (!desenvolvedor) {
-        throw new Error("Desenvolvedor não localizado");
-    }
 
     return(
         <View style={[styles.container, styles.root]}>
@@ -31,7 +29,7 @@ export function SobreMim({ route }: SobreMimScreenProps){
             </Pressable>
             <FotoPerfil idDesenvolvedor={idDesenvolvedor} />
             <Titulo texto="Sobre mim"/>
-            <CampoTexto texto={desenvolvedor.descricao}/>
+            <CampoTexto texto={desenvolvedor?.descricao}/>
             <Rodape/>
         </View>
     )
