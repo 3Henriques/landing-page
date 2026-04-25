@@ -9,7 +9,7 @@ import Titulo from "../../components/Titulo/Titulo";
 import CampoTexto from "../../components/CampoTexto/CampoTexto";
 import { BotaoRedesSociais } from "../../components/BotaoRedesSociais/BotaoRedesSociais";
 import { tema } from "../../Tema";
-import { desenvolvedores } from "../../data/desenvolvedores";
+import { useDesenvolvedor } from "../../hooks/useDesenvolvedor";
 
 
 export function Home(){
@@ -27,23 +27,24 @@ export function Home(){
     }
 
     function defDesenvolvedor(idDesenvolvedor: number) {
+        const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
         return (
             <>
                 <Botao idDesenvolvedor={idDesenvolvedor} />
                 <View style={styles.socialRow}>
                     <BotaoRedesSociais
                         label="GitHub"
-                        onPress={() => openUrl(SOCIAL_URLS.github + desenvolvedores[idDesenvolvedor].redesSociais.GitHub)}
+                        onPress={() => openUrl(SOCIAL_URLS.github + desenvolvedor.redesSociais.GitHub)}
                         icon={<MaterialCommunityIcons name="github" size={20} color={tema.accent} />} />
                     <BotaoRedesSociais
                         label="LinkedIn"
-                        onPress={() => openUrl(SOCIAL_URLS.linkedin + desenvolvedores[idDesenvolvedor].redesSociais.LinkedIn)}
+                        onPress={() => openUrl(SOCIAL_URLS.linkedin + desenvolvedor.redesSociais.LinkedIn)}
                         icon={<MaterialCommunityIcons name="linkedin" size={20} color={tema.accent} />} />
                 </View>
                 <View style={styles.socialRow}>
                     <BotaoRedesSociais
                         label="Instagram"
-                        onPress={() => openUrl(SOCIAL_URLS.instagram + desenvolvedores[idDesenvolvedor].redesSociais.Instagram)}
+                        onPress={() => openUrl(SOCIAL_URLS.instagram + desenvolvedor.redesSociais.Instagram)}
                         icon={<MaterialCommunityIcons name="instagram" size={20} color={tema.accent} />} />
                     <BotaoRedesSociais
                         label="Twitch"
