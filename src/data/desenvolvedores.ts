@@ -37,14 +37,14 @@ export const desenvolvedores: Desenvolvedor[] = [
     {
         id: 3,
         nome: "Henrique Garcia Carvalho",
-        especialidade: "",
+        especialidade: "Software Architect",
         imagens: imagens[2],
-        apelido: "",
-        fraseAprensentacao: "",
+        apelido: "Porto",
+        fraseAprensentacao: "Arquitetura confiável e segura",
         descricao: "",
         sobreMim: "",
         redesSociais:{
-            GitHub: "",
+            GitHub: "carvalh0Henrique",
             LinkedIn: "",
             Instagram: ""
         },
