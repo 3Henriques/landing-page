@@ -1,9 +1,14 @@
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type {
+  NativeStackNavigationProp,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   Home: undefined;
-  About: { developerId: number } | undefined;
+  SobreMim: {
+    idDesenvolvedor: number;
+  };
 };
 
 export type HomeNavigation = NativeStackNavigationProp<RootStackParamList, 'Home'>;
-export type AboutNavigation = NativeStackNavigationProp<RootStackParamList, 'About'>;
+export type SobreMimScreenProps = NativeStackScreenProps<RootStackParamList, 'SobreMim'>;

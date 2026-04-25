@@ -4,8 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Home } from './src/screens/Home/Home';
+import { SobreMim } from './src/screens/SobreMim/SobreMim';
+import type { RootStackParamList } from './src/navigation/AppNavigator';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
           }}
         >
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="SobreMim" component={SobreMim} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
