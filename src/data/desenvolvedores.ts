@@ -12,7 +12,7 @@ export const desenvolvedores: Desenvolvedor[] = [
         descricao: "",
         sobreMim: "",
         redesSociais:{
-            GitHub: "",
+            GitHub: "ghgennari",
             LinkedIn: "",
             Instagram: ""
         },
@@ -29,8 +29,8 @@ export const desenvolvedores: Desenvolvedor[] = [
         sobreMim: "Possuo conhecimentos em desenvolvimento e programação, com domínio intermediário em Python e Java, aplicação de Programação Orientada a Objetos e uso do framework Spring Boot em nível intermediário. Tenho contato com bancos de dados relacionais e não relacionais, incluindo SQL, SQL Server, PL/SQL, PostgreSQL e MongoDB, além de utilização do Microsoft Access. Também possuo familiaridade com versionamento de código utilizando Git e com containerização por meio do Docker em nível básico. Na área de infraestrutura e redes, tenho experiência com suporte técnico, Active Directory, configuração de roteadores, endereçamento IP, roteamento estático e dinâmico, virtualização com Oracle VM VirtualBox e configuração básica de serviços em nuvem, como Amazon EC2 e AWS Amplify. Além disso, já utilizei ferramentas de inteligência artificial como o Google AI Studio. Tenho familiaridade com metodologias e práticas de gestão e melhoria de processos, incluindo Scrum, Kanban, Agile e PDCA. Também possuo experiência com ferramentas de produtividade e colaboração, como Microsoft Word, Excel, PowerPoint e Teams, bem como com edição de vídeo utilizando o Sony Vegas Pro 17.",
         redesSociais:{
             GitHub: "h-and-rod",
-            LinkedIn: "",
-            Instagram: ""
+            LinkedIn: "ghgennari",
+            Instagram: "ghgennari"
         },
         cor: "#F34"
     },
