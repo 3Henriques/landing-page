@@ -35,6 +35,7 @@ export function Home(){
         const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
         return (
             <>
+                <Interruptor />
                 <Botao idDesenvolvedor={idDesenvolvedor} />
                 <View style={styles.socialRow}>
                     <BotaoRedesSociais
@@ -74,8 +75,7 @@ export function Home(){
                     idDesenvolvedor={idDesenvolvedor}
                     onChangeIdDesenvolvedor={setIdDesenvolvedor}
                 />                
-                {idDesenvolvedor !== null && defDesenvolvedor(idDesenvolvedor)}
-                <Interruptor />
+                {idDesenvolvedor !== null && defDesenvolvedor(idDesenvolvedor)}                
                 <Rodape />
             </ScrollView>
         </View>

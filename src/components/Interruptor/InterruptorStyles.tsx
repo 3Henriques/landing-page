@@ -2,21 +2,25 @@ import { StyleSheet } from 'react-native';
 import { tema } from '../../Tema';
 
 export const styles = StyleSheet.create({
-    primaryBtn: {
-        backgroundColor: tema.accent,
-        borderRadius: 8,
-        paddingVertical: 14,
-        marginTop: 12,
-        alignItems: 'center',
+    topBlock: {
+        paddingTop: 16,
+        paddingHorizontal: tema.paddingHorizontal,
     },
-
-    primaryLabel: {
-        color: tema.textOnAccent,
+    heading: {
+        color: tema.text,
         fontSize: 16,
         fontWeight: '600',
+        textAlign: 'center',
     },
-
-    pressed: {
-        opacity: 0.9,
-    }
+    switchRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: 12,
+    },
+    switchLabel: {
+        color: tema.text,
+        fontSize: 15,
+        fontWeight: '400',
+    },
 });

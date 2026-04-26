@@ -1,17 +1,26 @@
-import { View, Pressable, Text, Alert } from 'react-native';
+import { View, Text, Alert, Switch } from 'react-native';
 import { styles } from '../Interruptor/InterruptorStyles';
+import { useState } from 'react';
 
-export function BotaoSwitch() {
+export default function BotaoSwitch() {
+    const [switchOn, setSwitchOn] = useState(false);
+
     return (
-        <View>
-            <Pressable
-                onPress={() => Alert.alert('Switch pressionado')}
-                style={({ pressed }) => [styles.primaryBtn, pressed && styles.pressed]}
-            >
-                <Text style={styles.primaryLabel}>Switch</Text>
-            </Pressable>
+      <View style={styles.topBlock}>
+        <Text style={styles.heading}>Acesse minhas redes:</Text>
+        <View style={styles.switchRow}>
+          <Text style={styles.switchLabel}>Alterar visualização</Text>
+          <Switch
+            value={switchOn}
+            onValueChange={(v) => { 
+              setSwitchOn(v);
+              Alert.alert('Switch pressionado');
+            }}
+            trackColor={{ false: '#334155', true: '#5bc0de' }}
+            thumbColor="#ffffff"
+            ios_backgroundColor="#334155"
+          />
         </View>
+      </View>
     );
 }
-
-export default BotaoSwitch;
