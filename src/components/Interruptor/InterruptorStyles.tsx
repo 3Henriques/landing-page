@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     topBlock: {
         paddingTop: 16,
         paddingHorizontal: tema.paddingHorizontal,
+        marginBottom: 10
     },
     heading: {
         color: tema.text,

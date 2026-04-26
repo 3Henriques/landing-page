@@ -8,8 +8,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     paddingBottom: 20,
-    marginTop: 20,
-    //marginBottom: 40
+    marginTop: 10,
   },
   text: {
     color: tema.textOnAccent,

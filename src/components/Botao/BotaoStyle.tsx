@@ -2,6 +2,11 @@ import { StyleSheet } from 'react-native';
 import { tema } from '../../Tema';
 
 export const styles = StyleSheet.create({
+    container: {
+        marginTop: 10,
+        marginBottom: 10        
+    },
+
     primaryBtn: {
         backgroundColor: tema.accent,
         borderRadius: 8,

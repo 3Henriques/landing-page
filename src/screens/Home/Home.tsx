@@ -34,9 +34,9 @@ export function Home(){
     function defDesenvolvedor(idDesenvolvedor: number) {
         const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
         return (
-            <>
-                <Interruptor />
+            <>                
                 <Botao idDesenvolvedor={idDesenvolvedor} />
+                <Interruptor />
                 <View style={styles.socialRow}>
                     <BotaoRedesSociais
                         label="GitHub"
@@ -65,19 +65,21 @@ export function Home(){
         <View style={[styles.root, { paddingTop: insets.top }]}>
             <ScrollView
                 keyboardShouldPersistTaps="handled"
-                showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}                
             >
-                <Logo />
-                <FotoPerfil />
-                <Titulo texto="Bem-vindo aos 3Henriques!" />
-                <CampoTexto texto={"Somos três estudantes de Análise e Desenvolvimento de Sistemas, atualmente no quinto semestre, unidos pela paixão por tecnologia e pela busca constante por evolução na área de desenvolvimento.\nAo longo da graduação, participamos de diversos projetos práticos que fortaleceram nossos conhecimentos técnicos e nosso trabalho em equipe.\nJá desenvolvemos aplicações utilizando Angular, Spring Boot, Java e linguagem C, além de experiências com banco de dados MongoDB e modelagem de sistemas. Também aplicamos conceitos essenciais de Engenharia de Software, como DER, diagramas de classes, casos de uso e diagramas de sequência.\nEntre nossos principais projetos, destacamos o desenvolvimento de um sistema para controle de laboratórios e salas da faculdade, focado em organização, eficiência e facilidade de uso.\nEste portfólio representa nossa trajetória acadêmica, dedicação e vontade de transformar ideias em soluções reais."}/>
-                <ComboDevs
-                    idDesenvolvedor={idDesenvolvedor}
-                    onChangeIdDesenvolvedor={setIdDesenvolvedor}
-                />                
-                {idDesenvolvedor !== null && defDesenvolvedor(idDesenvolvedor)}                
+                <View style={styles.scroll}>
+                    <Logo />
+                    <FotoPerfil />
+                    <Titulo texto="Bem-vindo aos 3Henriques!" />
+                    <CampoTexto texto={"Somos três estudantes de Análise e Desenvolvimento de Sistemas, atualmente no quinto semestre, unidos pela paixão por tecnologia e pela busca constante por evolução na área de desenvolvimento.\nAo longo da graduação, participamos de diversos projetos práticos que fortaleceram nossos conhecimentos técnicos e nosso trabalho em equipe.\nJá desenvolvemos aplicações utilizando Angular, Spring Boot, Java e linguagem C, além de experiências com banco de dados MongoDB e modelagem de sistemas. Também aplicamos conceitos essenciais de Engenharia de Software, como DER, diagramas de classes, casos de uso e diagramas de sequência.\nEntre nossos principais projetos, destacamos o desenvolvimento de um sistema para controle de laboratórios e salas da faculdade, focado em organização, eficiência e facilidade de uso.\nEste portfólio representa nossa trajetória acadêmica, dedicação e vontade de transformar ideias em soluções reais."}/>
+                    <ComboDevs
+                        idDesenvolvedor={idDesenvolvedor}
+                        onChangeIdDesenvolvedor={setIdDesenvolvedor}
+                    />                
+                    {idDesenvolvedor !== null && defDesenvolvedor(idDesenvolvedor)}
+                </View>           
                 <Rodape />
-            </ScrollView>
+            </ScrollView>            
         </View>
     )
 }

@@ -7,7 +7,7 @@ export default function BotaoSwitch() {
 
     return (
       <View style={styles.topBlock}>
-        <Text style={styles.heading}>Acesse minhas redes:</Text>
+        <Text style={styles.heading}>Acesse nossas redes:</Text>
         <View style={styles.switchRow}>
           <Text style={styles.switchLabel}>Alterar visualização</Text>
           <Switch
