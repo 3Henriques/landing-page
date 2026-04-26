@@ -13,6 +13,7 @@ import CampoTexto from "../../components/CampoTexto/CampoTexto";
 import Rodape from "../../components/Rodape/Rodape";
 import Titulo from "../../components/Titulo/Titulo";
 import Logo from "../../components/Logo/Logo";
+import Interruptor from "../../components/Interruptor/Interruptor";
 
 
 export function Home(){
@@ -74,6 +75,7 @@ export function Home(){
                     onChangeIdDesenvolvedor={setIdDesenvolvedor}
                 />                
                 {idDesenvolvedor !== null && defDesenvolvedor(idDesenvolvedor)}
+                <Interruptor />
                 <Rodape />
             </ScrollView>
         </View>
