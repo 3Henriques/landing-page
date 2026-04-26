@@ -34,7 +34,7 @@ export function ComboDevs({ idDesenvolvedor, onChangeIdDesenvolvedor }: Props) {
               key={developer.id}
               label={developer.nome}
               value={developer.id}
-              color="#000"
+              color={Platform.OS === 'android' ? "#000" : "#FFF"} 
             />
           ))}
         </Picker>
