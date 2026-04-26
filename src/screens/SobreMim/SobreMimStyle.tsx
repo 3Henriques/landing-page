@@ -3,8 +3,6 @@ import { tema } from "../../Tema";
 
 export const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: "center",
 		alignItems: "center",
 	},
 
@@ -18,6 +16,7 @@ export const styles = StyleSheet.create({
     back: {
         alignSelf: 'flex-start',
         marginBottom: 8,
+        marginTop:60
     },
 
 })

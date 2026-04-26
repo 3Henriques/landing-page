@@ -62,7 +62,6 @@ export function Home(){
     return(
         <View style={[styles.root, { paddingTop: insets.top }]}>
             <ScrollView
-                contentContainerStyle={styles.scroll}
                 keyboardShouldPersistTaps="handled"
                 showsVerticalScrollIndicator={false}
             >

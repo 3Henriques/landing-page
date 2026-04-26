@@ -15,10 +15,10 @@ export const styles = StyleSheet.create({
         backgroundColor: tema.background,
     },
   
-    scroll: {
-        paddingHorizontal: tema.paddingHorizontal,
-        paddingBottom: 32,
-    },
+    // scroll: {
+    //     paddingHorizontal: tema.paddingHorizontal,
+    //     paddingBottom: 32,
+    // },
 
     socialRow: {
         flexDirection: 'row',

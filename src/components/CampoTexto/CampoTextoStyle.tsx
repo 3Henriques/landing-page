@@ -8,5 +8,6 @@ export const styles = StyleSheet.create({
     textAlign: 'justify',
     lineHeight: 24,
     marginTop: 12,
+    paddingHorizontal: 20,
   },
 });
