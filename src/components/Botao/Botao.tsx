@@ -11,7 +11,7 @@ export function Botao({idDesenvolvedor}: BotaoProps){
     const navigation = useNavigation<HomeNavigation>();
 
     return(
-        <View>
+        <View style={styles.container}>
             <Pressable
                 onPress={() => navigation.navigate('SobreMim', { idDesenvolvedor })}
                 style={({ pressed }) => [styles.primaryBtn, pressed && styles.pressed]}

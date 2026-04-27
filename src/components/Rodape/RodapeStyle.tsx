@@ -3,10 +3,12 @@ import { tema } from '../../Tema';
 
 export const styles = StyleSheet.create({
   bar: {
+    flex: 1,
     backgroundColor: tema.accent,
     paddingVertical: 12,
     paddingHorizontal: 16,
-    marginTop: 8,
+    paddingBottom: 20,
+    marginTop: 10,
   },
   text: {
     color: tema.textOnAccent,

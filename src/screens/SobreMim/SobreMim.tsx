@@ -1,6 +1,5 @@
-import { View, Text, Pressable } from "react-native";
-import { desenvolvedores } from "../../data/desenvolvedores";
-import type { HomeNavigation, SobreMimScreenProps } from "../../navigation/AppNavigator";
+import { View, Pressable, ScrollView } from "react-native";
+import type { SobreMimScreenProps } from "../../navigation/AppNavigator";
 import { styles } from "./SobreMimStyle";
 import { FotoPerfil } from "../../components/FotoPerfil/FotoPerfil";
 import Titulo from "../../components/Titulo/Titulo";
@@ -11,26 +10,42 @@ import { tema } from "../../Tema";
 import { useNavigation } from "@react-navigation/native";
 import { useDesenvolvedor } from "../../hooks/useDesenvolvedor";
 
+export function SobreMim({ route }: SobreMimScreenProps) {
+  const { idDesenvolvedor } = route.params;
+  const navigation = useNavigation();
+  const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
 
-export function SobreMim({ route }: SobreMimScreenProps){
-    const { idDesenvolvedor } = route.params;
-    const navigation = useNavigation<HomeNavigation>();
-    const desenvolvedor = useDesenvolvedor(idDesenvolvedor);
+  return (
+    <View style={[styles.root]}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
+      >
+        <Pressable
+          onPress={() => navigation.goBack()}
+          hitSlop={8}
+          style={({ pressed }) => [
+            styles.back,
+            pressed && { opacity: 0.7 }
+          ]}
+        >
+          <Ionicons
+            name="chevron-back"
+            size={30}
+            color={tema.text}
+          />
+        </Pressable>
 
+        <FotoPerfil idDesenvolvedor={idDesenvolvedor} />
 
-    return(
-        <View style={[styles.container, styles.root]}>
-            <Pressable
-            onPress={() => navigation.goBack()}
-            hitSlop={8}
-            style={({ pressed }) => [styles.back, pressed && { opacity: 0.7 }]}
-            >
-            <Ionicons name="chevron-back" size={24} color={tema.text} />
-            </Pressable>
-            <FotoPerfil idDesenvolvedor={idDesenvolvedor} />
-            <Titulo texto="Sobre mim"/>
-            <CampoTexto texto={desenvolvedor?.descricao}/>
-            <Rodape/>
-        </View>
-    )
+        <Titulo texto="Sobre mim" />
+
+        <CampoTexto texto={desenvolvedor?.descricao} />
+
+        <CampoTexto texto={desenvolvedor?.sobreMim} />
+
+        <Rodape />
+      </ScrollView>
+    </View>
+  );
 }
