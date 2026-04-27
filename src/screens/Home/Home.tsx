@@ -22,7 +22,7 @@ export function Home(){
 
     const SOCIAL_URLS = {
         github: 'https://github.com/',
-        linkedin: 'https://www.linkedin.com/',
+        linkedin: 'https://www.linkedin.com/in/',
         instagram: 'https://www.instagram.com/',
         twitch: 'https://www.twitch.tv/',
     } as const;
