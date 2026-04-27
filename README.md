@@ -24,6 +24,14 @@ O aplicativo funciona como um portfólio colaborativo de um trio de desenvolvedo
     - Layout focado em legibilidade e hierarquia de informação.
     - Rodapé com os créditos do projeto.
 
+| Home | Home | Home | Sobre Mim |
+|---|---|---|---|
+| ![](https://github.com/user-attachments/assets/195f32bb-c082-4ca9-a7b3-985a3687c7e3) | ![](https://github.com/user-attachments/assets/fbbf69fe-0749-429d-9d7a-73b13542e637) | ![](https://github.com/user-attachments/assets/6485c803-f821-4270-b348-11454895c280) | ![](https://github.com/user-attachments/assets/d15a9b49-4a91-4a1a-b900-ef47528e756b) |
+
+
+
+
+
 ## 🛠 Tecnologias Utilizadas
 
 - **React Native**
